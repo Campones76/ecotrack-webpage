@@ -1,32 +1,124 @@
 <!-- templates/navbar.html -->
 <section class="nav_wrapper">
-         <div class="navigation_bar">
-            <a href="/" aria-current="page" class="ridiculous w-inline-block w--current">
-               <div class="header_copy ridiculous">EcoTrack</div>
+    <div class="navigation_bar">
+        <a href="/" aria-current="page" class="ridiculous w-inline-block w--current">
+            <div class="header_copy ridiculous">EcoTrack</div>
+        </a>
+        <div class="nav-center-div">
+            <a href="/ridiculous-sips" class="sips-nav-link w-inline-block">
+                <div class="sips">
+                    <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7ddf1de2876fc4b00_Sips.svg" loading="lazy" alt="" class="sips-icon"/>
+                    <div class="header_copy">Analyse</div>
+                </div>
             </a>
-            <div class="nav-center-div">
-               <a href="/ridiculous-sips" class="sips-nav-link w-inline-block">
-                  <div class="sips">
-                     <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7ddf1de2876fc4b00_Sips.svg" loading="lazy" alt="" class="sips-icon"/>
-                     <div class="header_copy">Analyse</div>
-                  </div>
-               </a>
-               <a href="/ridiculous-shots" class="shots w-inline-block">
-                  <div class="shots">
-                     <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f77ca82bcfa3745a3a_Shots.svg" loading="lazy" alt="" class="shots-icon"/>
-                     <div class="header_copy">Data</div>
-                  </div>
-               </a>
-               <a href="/about" class="nav_about w-inline-block">
-                  <div class="nav-about">
-                     <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7dd2a913e30b9dd69_About.svg" loading="lazy" alt="" class="about-icon"/>
-                     <div class="header_copy">About</div>
-                  </div>
-               </a>
+            <div class="nav-dropdown">
+                <a href="/ridiculous-shots" class="shots w-inline-block">
+                    <div class="shots">
+                        <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f77ca82bcfa3745a3a_Shots.svg" loading="lazy" alt="" class="shots-icon"/>
+                        <div class="header_copy">Data</div>
+                    </div>
+                </a>
+                <!-- Sub Navbar -->
+                <div class="sub-navbar">
+                    <a href="/data-overview" class="sub-nav-item">Historical Data</a>
+                    <a href="/partener-dashboard" class="sub-nav-item">Dashboard</a>
+                </div>
             </div>
-            <a href="/submit" class="nav-submit-cta w-inline-block">
-               <div class="header_copy">Submit your idea</div>
-               <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7cc0352610b5b7536_Arrow%20-%20Right.svg" loading="lazy" alt="" class="image-26"/>
+            <a href="/about" class="nav_about w-inline-block">
+                <div class="nav-about">
+                    <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7dd2a913e30b9dd69_About.svg" loading="lazy" alt="" class="about-icon"/>
+                    <div class="header_copy">About</div>
+                </div>
             </a>
-         </div>
-      </section>
+        </div>
+        <a href="/submit" class="nav-submit-cta w-inline-block">
+            <div class="header_copy">Submit your idea</div>
+            <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7cc0352610b5b7536_Arrow%20-%20Right.svg" loading="lazy" alt="" class="image-26"/>
+        </a>
+    </div>
+</section>
+<!-- Add this to your navbar HTML -->
+<!--
+
+<div class="sub-navbar">
+    <a href="/data-overview" class="sub-nav-item">Historical Data</a>
+    <a href="/partener-dashboard" class="sub-nav-item">Dashboard</a>
+</div>-->
+
+<style>
+    .nav-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .sub-navbar {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        background-image: linear-gradient(#40404080, #40404066);
+        border-radius: 20px;
+        padding: 8px 16px;
+        min-width: 160px;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin-top: 8px;
+        transition: opacity 0.2s ease-out, visibility 0.2s linear;
+        transition-delay: 0s;
+    }
+
+    .nav-dropdown:hover .sub-navbar {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+
+    /* Add separate transition for hover exit */
+    .nav-dropdown:not(:hover) .sub-navbar {
+        transition: opacity 0.2s ease-out 0.3s,
+                    visibility 0s linear 0.5s; /* Delay before hiding */
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Add this to maintain hover state when moving to submenu */
+    .sub-navbar:hover {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition-delay: 0s !important;
+    }
+
+    .sub-nav-item {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        margin: 4px 0;
+    }
+
+    .sub-nav-item:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateX(2px);
+    }
+
+    /* Add pointer to dropdown */
+    .sub-navbar::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent transparent rgba(64,64,64,0.8) transparent;
+    }
+</style>
