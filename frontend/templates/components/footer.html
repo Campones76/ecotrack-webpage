@@ -1,0 +1,104 @@
+<!-- templates/footer.html -->
+<style>
+.ticker-section {
+  overflow: hidden;
+}
+
+.ticker-wrapper {
+  display: flex;
+  width: 200%;
+  animation: slide 7s linear infinite;
+}
+
+.sticker-content {
+  flex: 0 0 50%;
+  display: flex;
+}
+
+.ticker-block, .ticker-block-2 {
+  flex: 0 0 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+</style>
+<section class="footer">
+    <div class="w-layout-blockcontainer container_section_footer w-container">
+        <div class="footer_wrapper">
+            <div class="headline_wrapper">
+                <div class="headline-4 footer">EcoTrack<br/></div>
+            </div>
+            <div class="footer-right-container">
+                <div class="footer-tagline-container">
+                    <div class="body_copy white left-aligned">Welcome to our community of volunteers collaborating to make the world a better place. One report at a time.</div>
+                </div>
+                <div class="footer-links-container">
+                    <a href="#" class="sips-nav-link w-inline-block">
+                        <div class="sips">
+                            <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7ddf1de2876fc4b00_Sips.svg" loading="lazy" alt="" class="sips-icon"/>
+                            <div class="header_copy">Sips</div>
+                        </div>
+                    </a>
+                    <a href="#" class="shots w-inline-block">
+                        <div class="shots">
+                            <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f77ca82bcfa3745a3a_Shots.svg" loading="lazy" alt="" class="shots-icon"/>
+                            <div class="header_copy">Shots</div>
+                        </div>
+                    </a>
+                    <a href="/about" class="nav_about w-inline-block">
+                        <div class="nav-about">
+                            <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667df9f7dd2a913e30b9dd69_About.svg" loading="lazy" alt="" class="about-icon"/>
+                            <div class="header_copy">About</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="social_image_wrapper">
+                    <a href="https://www.instagram.com/ridiculousdotdesign/" target="_blank" class="link-block-7 w-inline-block">
+                        <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667f4d88ccc8c07f03c7cfab_Instagram.svg" loading="lazy" alt="" class="social_image"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yatrik-raithatha-256020136/" target="_blank" class="link-block-7 w-inline-block">
+                        <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667f4d88c0744f2b98c5d968_LinkedIn.svg" loading="lazy" alt="" class="social_image"/>
+                    </a>
+                    <a href="mailto:yatrik9720@gmail.com?subject=%7BName%7D%20is%20saying%20hi%20from%20ridiculous%20design" class="link-block-7 w-inline-block">
+                        <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/667f4d88f8a088310f93f0ad_Email.svg" loading="lazy" alt="" class="social_image"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ticker-section">
+        <div class="ticker-wrapper">
+          <div class="sticker-content">
+            <div class="ticker-block">
+              <!- class="ticker-copy" colormatic-text id="splash1" ->
+              <div class="ticker-copy" id="splash1"></div>
+              <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/65d230201a8dd50bfe4196b8_giphy.gif" loading="lazy" alt="" class="image-30"/>
+            </div>
+            <div class="ticker-block-2">
+              <div class="ticker-copy" id="splash2"></div>
+              <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/65d230201a8dd50bfe4196b8_giphy.gif" loading="lazy" alt="" class="image-30"/>
+            </div>
+          </div>
+          <div class="sticker-content">
+            <div class="ticker-block">
+              <div class="ticker-copy" id="splash3"></div>
+              <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/65d230201a8dd50bfe4196b8_giphy.gif" loading="lazy" alt="" class="image-30"/>
+            </div>
+            <div class="ticker-block-2">
+              <div class="ticker-copy" id="splash4"></div>
+              <img src="https://cdn.prod.website-files.com/64c73e48646a08f9331baab1/65d230201a8dd50bfe4196b8_giphy.gif" loading="lazy" alt="" class="image-30"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="../../static/js/splash-loader.js"></script>
